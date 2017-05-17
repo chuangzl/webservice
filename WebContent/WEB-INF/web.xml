@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+	<display-name>cloudportal</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+
+	<!-- 用来启动 log4jConfigLocation的servlet -->
+	<!-- 
+	<servlet>
+		<servlet-name>Log4JInitServlet</servlet-name>
+		<servlet-class>com.cisco.web.Log4JInitServlet</servlet-class>
+		<init-param>
+			<param-name>log4j-properties-location</param-name>
+			 
+			<param-value>/WEB-INF/classes/resource/log4j/log4j.properties</param-value>
+			
+			<param-value>WEB-INF\classes\resource\log4j\log4j.properties</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+    -->
+	<!-- ==============servlet================== -->
+
+	<servlet>
+		<servlet-name>proxy</servlet-name>
+		<servlet-class>com.cisco.web.Proxy</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>workflow</servlet-name>
+		<servlet-class>com.cisco.actions.WorkFlow</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>servicelist</servlet-name>
+		<servlet-class>com.cisco.actions.ServiceList</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>ActiveReport</servlet-name>
+		<servlet-class>com.cisco.report.ActiveReport</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>vmlist</servlet-name>
+		<servlet-class>com.cisco.actions.VmList</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>oscatalog</servlet-name>
+		<servlet-class>com.cisco.actions.OSCatalog</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>osinstant</servlet-name>
+		<servlet-class>com.cisco.actions.OSInstants</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>instants</servlet-name>
+		<servlet-class>com.cisco.actions.Instants</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>projectlist</servlet-name>
+		<servlet-class>com.cisco.web.project.ProjectList</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>projectinstancelist</servlet-name>
+		<servlet-class>com.cisco.web.project.ProjectInstanceList</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>vdclist</servlet-name>
+		<servlet-class>com.cisco.actions.VdcList</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>policy</servlet-name>
+		<servlet-class>com.cisco.actions.Policies</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>computingpolicy</servlet-name>
+		<servlet-class>com.cisco.actions.ComputingPolicy</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>createvm</servlet-name>
+		<servlet-class>com.cisco.actions.CreateVM</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>approve</servlet-name>
+		<servlet-class>com.cisco.actions.Approve</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>approvelist</servlet-name>
+		<servlet-class>com.cisco.actions.ApproveList</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>projecttopo</servlet-name>
+		<servlet-class>com.cisco.actions.DiagServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>getcatalogdetail</servlet-name>
+		<servlet-class>com.cisco.actions.GetCatalogDetail</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>networkservice</servlet-name>
+		<servlet-class>com.cisco.actions.NetworkService</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>oscreatevm</servlet-name>
+		<servlet-class>com.cisco.actions.OSCreateVM</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>osimage</servlet-name>
+		<servlet-class>com.cisco.actions.OSImage</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>osnetwork</servlet-name>
+		<servlet-class>com.cisco.actions.OSNetwork</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>osvnc</servlet-name>
+		<servlet-class>com.cisco.actions.OSVNC</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>processdetail</servlet-name>
+		<servlet-class>com.cisco.actions.ProcessDetail</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>vmalldatauser</servlet-name>
+		<servlet-class>com.cisco.actions.VmAllData_User</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>vmalldata</servlet-name>
+		<servlet-class>com.cisco.actions.VmAllData</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>workflowinput</servlet-name>
+		<servlet-class>com.cisco.actions.WorkFlowInput</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>ContextMapping</servlet-name>
+		<servlet-class>com.cisco.web.mapping.ContextMapping</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>acidb</servlet-name>
+		<servlet-class>com.cisco.web.acidb.AciDB</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>login</servlet-name>
+		<servlet-class>com.cisco.web.authentication.Login</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>logout</servlet-name>
+		<servlet-class>com.cisco.web.authentication.Logout</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>cliqrproxy</servlet-name>
+		<servlet-class>com.cisco.web.cliqr.CliQrProxy</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>usergroup</servlet-name>
+		<servlet-class>com.cisco.actions.UserGroup</servlet-class>
+	</servlet>
+	<!-- ==============servlet-mapping============================================================================ -->
+
+	<servlet-mapping>
+		<servlet-name>workflow</servlet-name>
+		<url-pattern>/workflow/</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>proxy</servlet-name>
+		<url-pattern>/proxy/</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>servicelist</servlet-name>
+		<url-pattern> /servicelist/</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>ActiveReport</servlet-name>
+		<url-pattern>/ActiveReport/</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>vmlist</servlet-name>
+		<url-pattern>/vmlist/</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>oscatalog</servlet-name>
+		<url-pattern>/oscatalog/</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>osinstant</servlet-name>
+		<url-pattern>/osinstant/</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>instants</servlet-name>
+		<url-pattern>/instants/</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>projectlist</servlet-name>
+		<url-pattern>/projectlist/</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>projectinstancelist</servlet-name>
+		<url-pattern>/projectinstancelist/</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>vdclist</servlet-name>
+		<url-pattern>/vdclist/</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>policy</servlet-name>
+		<url-pattern>/policy/</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>computingpolicy</servlet-name>
+		<url-pattern>/computingpolicy/</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>createvm</servlet-name>
+		<url-pattern>/createvm/</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>approve</servlet-name>
+		<url-pattern>/approve/</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>projecttopo</servlet-name>
+		<url-pattern>/projecttopo/</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>getcatalogdetail</servlet-name>
+		<url-pattern>/getcatalogdetail/</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>networkservice</servlet-name>
+		<url-pattern>/networkservice/</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>oscreatevm</servlet-name>
+		<url-pattern>/oscreatevm/</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>osimage</servlet-name>
+		<url-pattern>/osimage/</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>osnetwork</servlet-name>
+		<url-pattern>/osnetwork/</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>osvnc</servlet-name>
+		<url-pattern>/osvnc/</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>processdetail</servlet-name>
+		<url-pattern>/processdetail/</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>vmalldatauser</servlet-name>
+		<url-pattern>/vmalldatauser/</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>vmalldata</servlet-name>
+		<url-pattern>/vmalldata/</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>workflowinput</servlet-name>
+		<url-pattern>/workflowinput/</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>ContextMapping</servlet-name>
+		<url-pattern>/ContextMapping/</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>acidb</servlet-name>
+		<url-pattern>/acidb/</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>login</servlet-name>
+		<url-pattern>/login/</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>logout</servlet-name>
+		<url-pattern>/logout/</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>cliqrproxy</servlet-name>
+		<url-pattern>/cliqrproxy/</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>usergroup</servlet-name>
+		<url-pattern>/usergroup/</url-pattern>
+	</servlet-mapping>
+
+	<!-- ==============filter================== -->
+
+	<filter>
+	    <filter-name>loginfilter</filter-name>
+	    <filter-class>com.cisco.web.authentication.LoginFilter</filter-class>
+	    <init-param>
+	    <param-name>includeStrings</param-name>
+	    <param-value>.js;.css;.gif;.jpg;.png;.woff2;.woff;.ttf;.eot;cloudportal/login</param-value>
+	    </init-param>
+    </filter>
+<!--  
+	<filter>
+		<filter-name>servletfilter</filter-name>
+		<filter-class>com.cisco.web.authentication.ServletFilter</filter-class>
+	</filter>
+-->	
+	<!-- ==============filter-mapping================== -->
+
+	<filter-mapping>
+		<filter-name>loginfilter</filter-name>
+		<url-pattern>*</url-pattern>
+	</filter-mapping>
+<!--
+    <filter-mapping>
+		<filter-name>servletfilter</filter-name>
+		<servlet-name>*</servlet-name>
+	</filter-mapping>
+-->
+</web-app>

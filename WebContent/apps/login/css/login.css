@@ -1,0 +1,18 @@
+@CHARSET "UTF-8";
+body {
+background-image:url(img/sanfrancisco_1.jpg);
+background-repeat: no-repeat;
+background-position: center center;
+background-attachment: fixed;
+-moz-background-size: cover;
+-webkit-background-size: cover;
+background-size: cover;
+margin: 0;
+padding: 0;
+}
+
+.layout{
+	filter: alpha(opacity=80);
+	opacity: 0.8;
+	
+}
